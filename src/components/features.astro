@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "AI-Powered Interviews",
+    description:
+      "Automate candidate screenings with our AI, saving you time and ensuring a fair, unbiased process.",
+    icon: "mdi:chat-outline",
+  },
+  {
+    title: "Custom Question Builder",
+    description:
+      "Craft tailored interview questions that align perfectly with your company's unique needs and culture.",
+    icon: "mdi:comment-question",
+  },
+  {
+    title: "Candidate Scorecards",
+    description:
+      "Effortlessly compare candidates with intuitive scorecards, making it easy to identify the top talent.",
+    icon: "mdi:table-account",
+  },
+  {
+    title: "Collaborative Feedback",
+    description:
+      "Enable seamless team collaboration by sharing feedback and evaluations in one centralized platform.",
+    icon: "ri:team-fill",
+  },
+  {
+    title: "Intuitive Analytics",
+    description:
+      "Gain deep insights into your hiring process with detailed analytics, helping you make data-driven decisions.",
+    icon: "mdi:google-analytics",
+  },
+  {
+    title: "Seamless Integration",
+    description:
+      "Integrate Intermeet with your existing HR tools and systems for a smooth, efficient hiring workflow.",
+    icon: "clarity:connect-solid",
+  },
+];
+---
+
+<div class="mt-16 md:mt-8">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Upgrade Your Recruitment Strategy
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Intermeet offers powerful AI interviews, streamlined candidate management, and insightful analytics, transforming the way you hire and find your ideal team.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

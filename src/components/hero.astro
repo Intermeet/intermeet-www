@@ -1,0 +1,63 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<style>
+  @media screen and (min-width: 1024px) {
+    .heroimg {
+      max-width: 1000% !important;
+    }
+    .heroimg_container {
+      padding: 0px;
+      height: 100%;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+  .heroimg_container {
+    order: revert
+  }
+}
+</style>
+
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block heroimg_container">
+    <!-- <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    /> -->
+    <img src="/people.png" alt="Multiple people walking" class="heroimg" style="" />
+  </div>
+  <div>
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Elevate Your Hiring Process
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Streamline candidate selection with our AI powered interview assistant. <wbr />Effortlessly prescreen dozens of
+      candidates and zero in on the top talent. Welcome to the future of hiring!
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link href="#" href="" target="_blank" class="flex gap-1 items-center justify-center" rel="noopener">
+        <Icon class="text-white w-5 h-5" name="mdi:chat-outline" />
+
+        Try a demo interview
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href=""
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        Sign up free
+      </Link>
+    </div>
+  </div>
+</main>
